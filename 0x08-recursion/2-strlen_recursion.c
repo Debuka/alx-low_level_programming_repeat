@@ -4,7 +4,7 @@
  * @s - the string that its lenght will be determined
  * returns the lenght of the string.
  */
-void _strlen_recursion(char *s)
+_strlen_recursion(char *s)
 {
 	int dlenght = 0;
 	if (*s)

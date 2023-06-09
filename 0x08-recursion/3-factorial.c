@@ -4,7 +4,7 @@
  * @n -  the number its factorial will be returned
  * returns the factorial of n
  */
-void factorial(int n)
+factorial(int n)
 {
 	if (n == 0)
 	{

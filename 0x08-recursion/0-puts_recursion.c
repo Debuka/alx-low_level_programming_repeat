@@ -4,7 +4,7 @@
  *  @s - string
  *  returns nothing
  */
-void_put_putchar(char *s)
+void _puts_recursion(char *s)
 {
 	if(*s != '0')
 	{
