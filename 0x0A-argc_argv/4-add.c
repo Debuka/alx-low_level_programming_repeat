@@ -2,7 +2,6 @@
 #include<stdlib.h>
 #include<ctype.h>
 #include<string.h>
-
 /**
  * check_num - function that can numbers in a string
  * @str: an array of strings to be checked
@@ -10,10 +9,11 @@
  */
 int check_num(char *str)
 {
-	unsigned int j = 0;
+	unsigned int j;
+
+	j = 0;
 
 	while (j < strlen(str))
-
 	{
 		if (!isdigit(str[j]))
 		{
@@ -33,21 +33,22 @@ int check_num(char *str)
 int main(int argc, char *argv[])
 {
 	int sum = 0;
-	int j = 1;
+	int j;
 	int st;
 
-
-	while (j < argc)
+	j = 1;
+	while (j < argc)/*Iterates through array of strings*/
 	{
-		if (check_num(argv[j]))
-		{
-			st = atoi(argv[j]);/**atoi: converts strings to int*/
-			sum += st;
-		}
+	if (check_num(argv[j]))
+	{
+	st = atoi(argv[j]);/**atoi: converts strings to int*/
+	sum = sum + st;
+	}
+	/*if there's non didgit, tghis cindition will be applied*/
 		else
 		{
-			printf("error\n");
-			return (1);
+		printf("error\n");
+		return (1);
 		}
 		j++
 	}
