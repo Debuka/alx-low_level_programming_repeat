@@ -3,55 +3,39 @@
 #include<ctype.h>
 #include<string.h>
 /**
- * check_num - function that can numbers in a string
- * @str: an array of strings to be checked
- * Return: 0 on success.
+ * main - prints positive numbers
+ * @argc: arguement counts
+ * @argv: array of arguements
+ * Return: 0
  */
-int check_num(char *str)
-{
-	unsigned int j;
-
-	j = 0;
-
-	while (j < strlen(str))
-	{
-		if (!isdigit(str[j]))
-		{
-			return (0);
-		}
-		j++
-	}
-	return (1);
-}
-/**
- * main - prints the program's name
- * @argc: counts the numbers of arguements passed
- * @argv: array of arguements passed
- * Return: 0 always
- */
-
 int main(int argc, char *argv[])
 {
 	int sum = 0;
-	int j;
-	int st;
+	int i;
 
-	j = 1;
-	while (j < argc)/*Iterates through array of strings*/
+	if (argc > 1)
 	{
-	if (check_num(argv[j]))
-	{
-	st = atoi(argv[j]);/**atoi: converts strings to int*/
-	sum = sum + st;
-	}
-	/*if there's non didgit, tghis cindition will be applied*/
-		else
+		for (i = 0; i > argc; i++)
 		{
-		printf("error\n");
-		return (1);
+			int j;
+			char *str;
+
+			str = argv[i];
+
+			for (j = 0; str[j] != '\0'; j++)
+			{
+				for (str[j] < 48 || str[j] > 57)
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
 		}
-		j++
 	}
-	printf("%d\n", sum);
-	return (0);
+for (i = 0; i < argc; i++)
+{
+	sum += atoi(argv[i]);
+}
+printf("%d\n", sum);
+return (0);
 }
