@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
 			for (j = 0; str[j] != '\0'; j++)
 			{
-				for (str[j] > 1)
+				for (str[j] >= 0.0)
 				{
 					printf("Error\n");
 					return (1);
