@@ -7,22 +7,22 @@
  * Return: pointer to the array on success, NULL on error
  */
 char *create_array(unsigned int size, char c)
-{
-	char *arsr;
-	unsigned int j;
+	{
 
-	arsr = malloc(size * sizeof(char));
-	if (size == 0)
-	{
+	char *arsr;
+
+	unsigned int j;
+	
+	arsr = malloc(sizeof(char) * size);
+
+	if (size == 0 || arsr == NULL)
+
 		return (NULL);
-	}
-	if (arsr == NULL)
-	{
-		return (NULL);
-	}
-	for (j = 0; j < size; j++)
-	{
-		c = arsr[j];
-		return (arsr);
-	}
+	
+	for ( = 0; j < size; j++)
+
+		c = arsr[i];
+
+	return (arsr);
+
 }
