@@ -3,9 +3,8 @@
 #include<ctype.h>
 #include<string.h>
 /**
- * main - prints positive numbers
- * @argc: arguement counts
- * @argv: array of arguements
+ * check_num  - prints positive numbers
+ * @str: arry of strig
  * Return: 0
  */
 int check_num(char *str) /*check_num - checks for positive numbers*/
@@ -47,7 +46,7 @@ int check_num(char *str) /*check_num - checks for positive numbers*/
 		/*Declaring variables*/
 		int num;
 		int str_to_int;
-		int resut = 0;
+		int result = 0;
 
 
 		num = 1;
