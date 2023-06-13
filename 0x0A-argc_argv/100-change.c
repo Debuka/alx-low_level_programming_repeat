@@ -7,7 +7,7 @@
  * @argc: counts arguements
  * @argv:the array of arguements passed
  *
- * Return: 0 on sucess, 1 otherwise.
+ * Return: 0 on sucess, 1 on (error).
  */
 
 int main(int argc, char *argv[])
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	for (j = 0; j < 5 && i >= 0; i++)
+	for (j = 0; j < 5 && i  >= 0; j++)
 	{
 		while (i >= coins[j])
 		{
