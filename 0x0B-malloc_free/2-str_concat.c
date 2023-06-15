@@ -1,43 +1,52 @@
-#include<stdlib.h>
 #include"main.h"
+#include <stdlib.h>
+
 /**
- * str_concat - concats two strings
- * @s1: first string
- * @s2: second string
- * Return: pointer to the concated strings
+ * str_concat - Concatenates two strings
+ * @s1: First string
+ * @s2: Second string
+ *
+ * Return: Pointer to the string (Success),
+ *         or NULL if (Error)
  */
 char *str_concat(char *s1, char *s2)
-
 {
-	char *result;
-
-	int i, j;
+	char *peg;
+	int q, k;
 
 	if (s1 == NULL)
 		s1 = "";
+
 	if (s2 == NULL)
 		s2 = "";
-	i = j = 0;
 
-	while (s1[i] != '\0')
-		i++;
-	while (s2[j] != '\0')
-		j++;
-	conct = malloc(sizeof(char) * (i + j + 1));
-	if (conct == NULL)
+	q = k = 0;
+	while (s1[q] != '\0')
+		q++;
+
+	while (s2[k] != '\0')
+		k++;
+
+	peg = malloc(sizeof(char) * (q + k + 1));
+
+	if (peg == NULL)
 		return (NULL);
-	i = j = 0;
 
-	while (s1[i] != '\0')
+	q = k = 0;
+	while (s1[q] != '\0')
 	{
-		result[i] = s1[i];
-		i++;
+		peg[q] = s1[q];
+		q++;
 	}
-	while (s2[j] != '\0')
+
+	while (s2[k] != '\0')
 	{
-		result[i] = s2[j];
-		i++, j++;
+		peg[q] = s2[k];
+		q++;
+		k++;
 	}
-	resulst[i] = '\0';
-	return (result);
+
+	peg[q] = '\0';
+
+	return (peg);
 }
